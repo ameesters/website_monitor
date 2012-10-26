@@ -1,0 +1,10 @@
+Run these command and you *should* be ok:
+$ git clone git@github.com:ameesters/website_monitor.git
+$ cd website_monitor/
+$ chmod +x init_db.py main.py
+$ sqlite3 site_monitor.db
+$ ./init_db.py
+$ ./main.py
+
+if not please submit your error/cry for help to:
+ - https://github.com/ameesters/website_monitor/issues
