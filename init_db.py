@@ -23,7 +23,9 @@ print "db's created"
 
 SITES = [
 	"www.example.com",
-	"www.google.com"
+	"www.google.com",
+	"www.meesters-id.nl",
+	"carolsingers.nl"
 ]
 
 for site in SITES:
