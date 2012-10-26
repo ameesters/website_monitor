@@ -64,7 +64,7 @@ class SiteApp:
 		
 	def add_new_website(self, widget):
 		url = self.website_url.get_text()
-		add_site = self.c.execute('INSERT INTO sites(url, desc) VALUES(?,?)', (url, "Inital import comment"))
+		self.c.execute('INSERT INTO sites(url, desc) VALUES(?,?)', (url, "Inital import comment"))
 		self.conn.commit()
 		self.status_bar.push(self.context_id, "Status: new website added!")
 		self.website_url.set_text('')
@@ -140,12 +140,12 @@ class SiteApp:
 		column = gtk.TreeViewColumn("Site", rendererText, text=0)
 		column.set_sort_column_id(0)
 		treeView.append_column(column)
- 
+
 		rendererText = gtk.CellRendererText()
 		column = gtk.TreeViewColumn("Status", rendererText, text=1)
 		column.set_sort_column_id(1)    
 		treeView.append_column(column)
- 
+
 		rendererText = gtk.CellRendererText()
 		column = gtk.TreeViewColumn("Reason", rendererText, text=2)
 		column.set_sort_column_id(2)    
@@ -155,14 +155,14 @@ class SiteApp:
 		column = gtk.TreeViewColumn("Last updated", rendererText, text=3)
 		column.set_sort_column_id(3)    
 		treeView.append_column(column)
- 
- 
+
+
 	def destroy(self, widget, data=None):
 		'''close the window and quit'''
 		gtk.main_quit()
 		return False
 
- 
+
 	def main(self):
 		gtk.timeout_add(10*1000, self.timer_update)
 		gtk.timeout_add(60*1000, self.timer_check_status)
