@@ -27,6 +27,7 @@ PS) For people who get stuck in the sqlite shell try `.exit` ;-)
 Currently these issues are blocking a beta release(list will be updated frequently):
 * ~~Add website.~~
   * Proper validation on adding a website.
+  * https support
 * Edit website.
 * Delete website.
 * Open website in browser.

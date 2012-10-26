@@ -2,3 +2,5 @@
 site_monitor.db
 *.bfproject
 *.pyc
+.project
+.pydevproject
