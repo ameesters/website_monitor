@@ -32,30 +32,70 @@
 
 <p>A simple gtk ui for monitoring websites, released on the BSD 2-clause licence, see LICENCE for more information.</p>
 
-<p>Be warned, this is a work in progress, things will be broken!</p>
+<h3>Be warned, this is a work in progress, things will be broken!</h3>
+
+<h1>screenshots:</h1>
+
+<p><img src="https://raw.github.com/ameesters/website_monitor/master/docs/screenshots/site_monitor_001.png" alt="Website Monitor 0.1" title="Website Monitor 0.1"></p>
 
 <h1>Setup:</h1>
 
-<p><b>Make sure the pygtk module is installed, and gtk libs of version 2.0 or higher.</b></p>
+<p><b>Make sure the pygtk module is installed, and a gtk libs of version 2.0 or higher.</b></p>
 
-<p>First we need to clone this repository, so open a comandline and enter:</p>
+<p>First we need to execute some commands, so open a comandline and enter:</p>
 
 <div class="highlight"><pre><span class="nv">$ </span>git clone git@github.com:ameesters/website_monitor.git
 <span class="nv">$ </span><span class="nb">cd </span>website_monitor/
+<span class="nv">$ </span>chmod +x init_db.py main.py
 <span class="nv">$ </span>sqlite3 site_monitor.db
-<span class="nv">$ </span>chmod +x init_db.py
+<span class="nv">$ </span>./init_db.py
+<span class="nv">$ </span>./main.py
 </pre></div>
 
-<p>then proceed to edit init_db.py in your favorite editor, there is a list called SITES in there where you can add your sites, then save the file and exit.</p>
+<p>if not, please use the issue tracker!
+PS) For people who get stuck in the sqlite shell try <code>.exit</code> ;-)</p>
 
-<p>finally run the command and the application should start:</p>
+<h1>Todo:</h1>
 
-<div class="highlight"><pre><span class="nv">$ </span>./init_db.py
-<span class="nv">$ </span>chmod +x quick-check-gtk.py
-<span class="nv">$ </span>./quick-check-gtk.py
-</pre></div>
+<p>Currently these issues are blocking a beta release(list will be updated frequently):</p>
 
-<p>if not, please use the issue tracker!</p>
+<ul>
+<li>
+<del>Add website.</del>
+
+<ul>
+<li>Proper validation on adding a website.</li>
+</ul>
+</li>
+<li>Edit website.</li>
+<li>Delete website.</li>
+<li>Open website in browser.</li>
+<li>Set timeout from GUI.</li>
+<li>Setting update interval from GUI.</li>
+<li>Mute website option.</li>
+<li>Refactor the code using DRY/DIE principle.</li>
+<li>Move to a more MVC like structure.</li>
+<li>Add a proper menu</li>
+<li>Tracking history like:
+
+<ul>
+<li>uptime</li>
+<li>ping</li>
+<li>number of requests per visit</li>
+<li>date last modified</li>
+<li>Size of the webpage</li>
+<li>External links</li>
+</ul>
+</li>
+<li>Export/Backup options:
+
+<ul>
+<li>HTML</li>
+<li>PDF</li>
+<li>CSV</li>
+</ul>
+</li>
+</ul>
       </section>
     </div>
 
