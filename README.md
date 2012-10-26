@@ -6,6 +6,8 @@ A simple gtk ui for monitoring websites
 Be warned, this is a work in progress, things will be broken!
 
 # Setup:
+<b>Make sure the pygtk module is installed, and a gtk libs of version 2.0 or higher.</b>
+
 First clone this repository, open a commandline and enter the directory.
 From there, execute:
 ```bash
