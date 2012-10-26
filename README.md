@@ -1,7 +1,7 @@
 website_monitor
 ===============
 
-A simple gtk ui for monitoring websites
+A simple gtk ui for monitoring websites, released on the BSD 2-clause licence, see LICENCE for more information.
 
 Be warned, this is a work in progress, things will be broken!
 
