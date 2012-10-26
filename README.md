@@ -31,14 +31,17 @@ Currently these issues are blocking a beta release(list will be updated frequent
 * Setting update interval from GUI.
 * Mute website option.
 * Refactor the code using DRY/DIE principle.
-* Tracking history
+* Move to a more MVC like structure.
+* Add a proper menu
+* Tracking history like:
   * uptime
   * ping
   * number of requests per visit
   * date last modified
   * Size of the webpage
   * External links
-* Export options
+* Export/Backup options:
   * HTML
   * PDF
+  * CSV
   
