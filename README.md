@@ -25,11 +25,11 @@ PS) For people who get stuck in the sqlite shell try `.exit` ;-)
 
 # Todo:
 Currently these issues are blocking a beta release(list will be updated frequently):
-* Add website.
+* ~~Add website.~~
+  * Proper validation on adding a website.
 * Edit website.
 * Delete website.
 * Open website in browser.
-* Proper validation on adding a website.
 * Set timeout from GUI.
 * Setting update interval from GUI.
 * Mute website option.
