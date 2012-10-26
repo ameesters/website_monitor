@@ -5,6 +5,9 @@ A simple gtk ui for monitoring websites, released on the BSD 2-clause licence, s
 
 ### Be warned, this is a work in progress, things will be broken!
 
+#screenshots:
+![Website Monitor 0.1](https://github.com/ameesters/website_monitor/blob/master/docs/screenshots/site_monitor_001.png "Website Monitor 0.1")
+
 # Setup:
 <b>Make sure the pygtk module is installed, and a gtk libs of version 2.0 or higher.</b>
 
