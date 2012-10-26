@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+
+    <title>Website monitor by ameesters</title>
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <h1>Website monitor</h1>
+        <h2>A simple gtk ui for monitoring websites</h2>
+
+        <section id="downloads">
+          <a href="https://github.com/ameesters/website_monitor/zipball/master" class="btn">Download as .zip</a>
+          <a href="https://github.com/ameesters/website_monitor/tarball/master" class="btn">Download as .tar.gz</a>
+          <a href="https://github.com/ameesters/website_monitor" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <h1>website_monitor</h1>
+
+<p>A simple gtk ui for monitoring websites, released on the BSD 2-clause licence, see LICENCE for more information.</p>
+
+<p>Be warned, this is a work in progress, things will be broken!</p>
+
+<h1>Setup:</h1>
+
+<p><b>Make sure the pygtk module is installed, and a gtk libs of version 2.0 or higher.</b></p>
+
+<p>First we need to clone this repository, so open a comandline and enter:</p>
+
+<div class="highlight"><pre><span class="nv">$ </span>git clone git@github.com:ameesters/website_monitor.git
+<span class="nv">$ </span><span class="nb">cd </span>website_monitor/
+<span class="nv">$ </span>sqlite3 site_monitor.db
+<span class="nv">$ </span>chmod +x init_db.py
+</pre></div>
+
+<p>then proceed to edit init_bd.py in your favorite editor, there is a list called SITES in there where you can add your sites, then save the file and exit.</p>
+
+<p>finally run the command and the application should start:</p>
+
+<div class="highlight"><pre><span class="nv">$ </span>./init_db.py
+<span class="nv">$ </span>chmod +x quick-check-gtk.py
+<span class="nv">$ </span>./quick-check-gtk.py
+</pre></div>
+
+<p>if not, please use the issue tracker!</p>
+      </section>
+    </div>
+
+    
+  </body>
+</html>
