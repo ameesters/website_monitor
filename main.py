@@ -13,6 +13,9 @@ class SiteApp:
 		self.conn = sqlite3.connect('site_monitor.db')
 		self.c = self.conn.cursor()
 		
+		# Choose User Agent
+		self.useragent = "Website Monitor"
+		
 		# Create new window:
 		self.window = gtk.Window(gtk.WINDOW_TOPLEVEL)
 		self.window.set_title('Site Monitor')
@@ -76,7 +79,9 @@ class SiteApp:
 		for site in self.c.execute('SELECT site_id, url FROM sites'):
 			try:
 				conn = httplib.HTTPConnection(site[1], timeout=10)
-				conn.request("HEAD", "/")
+				headers = {}
+				headers['User-Agent'] = self.useragent
+				conn.request("GET", "/", "", headers)
 				response = conn.getresponse()
 			except(httplib.HTTPResponse, socket.error) as ex:
 				self.store.append([site[0], site[1], "504", "Gateway Timeout", datetime.datetime.now()])
@@ -95,7 +100,9 @@ class SiteApp:
 		for site in self.c.execute('SELECT site_id, url FROM sites'):
 			try:
 				conn = httplib.HTTPConnection(site[1], timeout=10)
-				conn.request("HEAD", "/")
+				headers = {}
+				headers['User-Agent'] = self.useragent
+				conn.request("GET", "/", "", headers)
 				response = conn.getresponse()
 			except(httplib.HTTPResponse, socket.error) as ex:
 				self.store.append([site[0], site[1], "504", "Gateway Timeout", datetime.datetime.now()])
@@ -115,7 +122,9 @@ class SiteApp:
 		for site in self.c.execute('SELECT site_id, url FROM sites'):
 			try:
 				conn = httplib.HTTPConnection(site[1], timeout=10)
-				conn.request("HEAD", "/")
+				headers = {}
+				headers['User-Agent'] = self.useragent
+				conn.request("GET", "/", "", headers)
 				response = conn.getresponse()
 			except(httplib.HTTPResponse, socket.error) as ex:
 				self.store.append([site[0], site[1], "504", "Gateway Timeout", datetime.datetime.now()])
